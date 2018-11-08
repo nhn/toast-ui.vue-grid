@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <h1>🍞📝TOAST UI Grid + Vue</h1>
+    <h1>🍞🔡 TOAST UI Grid + Vue</h1>
     <grid :rowData="data"
           :columnData="columns"
           :options="options"
