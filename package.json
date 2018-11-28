@@ -1,7 +1,7 @@
 {
   "name": "@toast-ui/vue-grid",
-  "version": "1.0.1",
-  "description": "Vue wrapper component for tui.grid",
+  "version": "1.0.2",
+  "description": "TOAST UI Grid for Vue",
   "main": "dist/toastui-vue-grid.js",
   "files": [
     "dist",
@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "eslint src/**",
     "build": "webpack --mode production",
-    "build:dev": "webpack --mode development"
+    "build:dev": "webpack --mode development",
+    "serve": "vue serve ./example/App.vue"
   },
   "homepage": "https://github.com/nhnent/toast-ui.vue-grid",
   "bugs": "https://github.com/nhnent/toast-ui.vue-grid/issues",
@@ -20,17 +21,16 @@
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+    "@vue/cli": "^3.2.1",
+    "@vue/cli-service-global": "^3.1.2",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.4",
-    "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
     "eslint-config-tui": "^2.0.0",
     "eslint-loader": "^2.1.0",
     "eslint-plugin-vue": "^4.7.1",
-    "file-loader": "^2.0.0",
     "vue": "^2.5.17",
     "vue-loader": "^15.4.1",
-    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
