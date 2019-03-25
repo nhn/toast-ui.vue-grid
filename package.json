@@ -1,6 +1,6 @@
 {
   "name": "@toast-ui/vue-grid",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "TOAST UI Grid for Vue",
   "main": "dist/toastui-vue-grid.js",
   "files": [
