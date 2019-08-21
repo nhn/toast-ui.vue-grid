@@ -64,10 +64,6 @@ export default {
     this.setLanguage();
   },
   beforeDestroy() {
-    for (const eventName of Object.keys(this.$listeners)) {
-      this.gridInstance.off(eventName);
-    }
-
     this.gridInstance.destroy();
   },
   methods: {
