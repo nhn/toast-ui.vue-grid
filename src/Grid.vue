@@ -52,11 +52,6 @@ export default {
       }
     }
   },
-  data() {
-    return {
-      gridInstance: null
-    };
-  },
   mounted() {
     const options = Object.assign({}, this.options, {
       el: this.$refs.tuiGrid,
