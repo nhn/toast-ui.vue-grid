@@ -63,7 +63,7 @@ export default {
     this.applyTheme();
     this.setLanguage();
   },
-  destroyed() {
+  beforeDestroy() {
     for (const eventName of Object.keys(this.$listeners)) {
       this.gridInstance.off(eventName);
     }
