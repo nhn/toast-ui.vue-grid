@@ -4,25 +4,6 @@
 <script>
 import Grid from 'tui-grid';
 
-const gridEvents = [
-  'beforeRequest',
-  'check',
-  'click',
-  'collapse',
-  'dblclick',
-  'errorResponse',
-  'expand',
-  'failResponse',
-  'focusChange',
-  'mousedown',
-  'mouseout',
-  'mouseover',
-  'response',
-  'selection',
-  'successResponse',
-  'uncheck'
-];
-
 const presetTheme = ['default', 'striped', 'clean'];
 
 const presetLanguage = ['en', 'ko'];
@@ -88,14 +69,17 @@ export default {
     this.setLanguage();
   },
   destroyed() {
-    gridEvents.forEach((eventName) => this.gridInstance.off(eventName));
+    for (const eventName of Object.keys(this.$listeners)) {
+      this.gridInstance.off(eventName);
+    }
+
     this.gridInstance.destroy();
   },
   methods: {
     addEventListeners() {
-      gridEvents.forEach((eventName) => {
+      for (const eventName of Object.keys(this.$listeners)) {
         this.gridInstance.on(eventName, (...args) => this.$emit(eventName, ...args));
-      });
+      }
     },
     applyTheme() {
       if (this.theme) {
