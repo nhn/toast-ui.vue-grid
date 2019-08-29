@@ -64,7 +64,11 @@ export default {
     this.setLanguage();
   },
   beforeDestroy() {
+    Object.keys(this.$listeners).forEach((eventName) => {
+      this.gridInstance.off(eventName);
+    });
     this.gridInstance.destroy();
+    this.gridInstance = null;
   },
   methods: {
     addEventListeners() {
@@ -94,19 +98,9 @@ export default {
       return this.$refs.tuiGrid;
     },
     invoke(methodName, ...args) {
-      let result;
-      if (methodName === 'resetData' && args.length > 0) {
-        const clonedData = JSON.parse(JSON.stringify(args[0]));
-        if (args.length > 1) {
-          this.gridInstance[methodName](clonedData, args[1]);
-        } else {
-          this.gridInstance[methodName](clonedData);
-        }
-      } else if (this.gridInstance[methodName]) {
-        result = this.gridInstance[methodName](...args);
-      }
-
-      return result;
+      return typeof this.gridInstance[methodName] === 'function'
+        ? this.gridInstance[methodName](...args)
+        : null;
     }
   }
 };
