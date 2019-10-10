@@ -55,7 +55,7 @@ export default {
     }
   },
   mounted() {
-    const options = Object.assign(this.options, this.$attrs, {
+    const options = Object.assign(this.options || {}, this.$attrs, {
       el: this.$refs.tuiGrid,
       data: this.data,
       columns: this.columns
