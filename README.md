@@ -1,3 +1,9 @@
+# ⚠️Notice: This repository is deprecated️️️️️
+
+TOAST UI Grid Vue Wrapper has been managed separately from the TOAST UI Grid repository. As a result of the distribution of these issues, we decided to deprecated each wrapper repository and manage repository as a [mono-repo](https://en.wikipedia.org/wiki/Monorepo) from the [TOAST UI Grid repository](https://github.com/nhn/tui.grid).
+
+From now on, please submit issues or contributings related to TOAST UI Vue Wrapper to [TOAST UI Grid repository](https://github.com/nhn/tui.grid). Thank you🙂.
+
 # TOAST UI Grid for Vue
 
 > This is Vue component wrapping [TOAST UI Grid](https://github.com/nhn/tui.grid).
